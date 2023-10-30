@@ -22,7 +22,7 @@ def get_fName():
         data_str = data_str.strip()  # Remove leading and trailing spaces
 
         if data_str:
-            break
+            return data_str
         else:
             print("cannot leave this empty. Please try again.\n")
 
@@ -38,7 +38,7 @@ def get_lName():
         data_str = data_str.strip()  # Remove leading and trailing spaces
 
         if data_str:
-            break
+            return data_str
         else:
             print("cannot leave this empty. Please try again.\n")
 
