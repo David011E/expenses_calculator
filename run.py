@@ -26,8 +26,6 @@ def get_fName():
         else:
             print("cannot leave this empty. Please try again.\n")
 
-get_fName()
-
 def get_lName():
     """
     Get's users Last name .
@@ -42,4 +40,10 @@ def get_lName():
         else:
             print("cannot leave this empty. Please try again.\n")
 
-get_lName()
+def greet_user():
+    first_name = get_fName()
+    last_name = get_lName()
+
+    print(f"Hello, {first_name} {last_name}! Welcome!")
+
+greet_user()
