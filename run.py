@@ -45,8 +45,9 @@ def greet_user():
     last_name = get_lName()
 
     print(f"Hello, {first_name} {last_name}! Welcome!")
+    return first_name, last_name
 
-greet_user()
+first_name, last_name = greet_user()
 
 def get_job_position():
 
@@ -64,7 +65,7 @@ def get_job_position():
         for key, position in job_positions.items():
             print(f"{key}: {position['name']}")
 
-        options = input("\n Select one of the above options (a-e): ").lower()
+        options = input("\nSelect one of the above options (a-e): ").lower()
 
         if options in job_positions:
             while True:
@@ -76,10 +77,19 @@ def get_job_position():
                     print(f"You make ฿{selected_job['rate']} per day as a {selected_job['name']}.")
                     return selected_job
                 elif confirm == "n":
-                    break  # User doesn't want to confirm, break the loop
+                    break  # User doesn't want to confirm, break the inner loop
                 else:
                     print("Invalid input. Please enter 'y' or 'n'.")
-        
-        print("Please choose job position again.\n")
+            # If 'n' was entered, continue to the outer loop for job selection
+        else:
+            print("Invalid job option. Please choose a valid job position.\n")
 
-get_job_position()
+selected_job = get_job_position()
+
+def user_selected_job(selected_job, first_name):
+    rate = selected_job["rate"]
+    made_per_month = rate * 30
+
+    print(f"\n{first_name} You made ฿{made_per_month} per month!")
+
+made_per_month = user_selected_job(selected_job, first_name)
