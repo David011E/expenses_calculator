@@ -21,10 +21,10 @@ def get_fName():
         data_str = input("Enter your First name here:\n")
         data_str = data_str.strip()  # Remove leading and trailing spaces
 
-        if data_str:
+        if data_str.isalpha(): # checks if contains only alphabetic characters (letters).
             return data_str
         else:
-            print("cannot leave this empty. Please try again.\n")
+            print("Cannot insert numbers or leave this empty. Please try again.\n")
 
 def get_lName():
     """
@@ -35,16 +35,16 @@ def get_lName():
         data_str = input("Enter your Last name here:\n")
         data_str = data_str.strip()  # Remove leading and trailing spaces
 
-        if data_str:
+        if data_str.isalpha(): # checks if contains only alphabetic characters (letters).
             return data_str
         else:
-            print("cannot leave this empty. Please try again.\n")
+            print("Cannot insert numbers or leave this empty. Please try again.\n")
 
 def greet_user():
     first_name = get_fName()
     last_name = get_lName()
 
-    print(f"Hello, {first_name} {last_name}! Welcome!")
+    print(f"\n Hello, {first_name} {last_name}! Welcome!")
     return first_name, last_name
 
 first_name, last_name = greet_user()
@@ -60,7 +60,7 @@ def get_job_position():
     }
 
     while True:
-        print("Select your job position")
+        print("\nSelect your job position")
         
         for key, position in job_positions.items():
             print(f"{key}: {position['name']}")
