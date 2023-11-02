@@ -1,5 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -88,7 +90,19 @@ selected_job = get_job_position()
 
 def user_selected_job(selected_job, first_name):
     rate = selected_job["rate"]
-    made_per_month = rate * 30
+     # Get the current date
+    current_date = datetime.now()
+
+    # Calculate the first day of the current month
+    first_day_of_month = current_date.replace(day=1)
+
+    # Calculate the last day of the current month
+    last_day_of_month = (first_day_of_month + relativedelta(months=1)) - relativedelta(days=1)
+
+    # Calculate the number of days in the current month
+    days_in_current_month = (last_day_of_month - first_day_of_month).days + 1
+
+    made_per_month = rate * days_in_current_month
 
     print(f"\n{first_name} You made ฿{made_per_month} per month!")
 
