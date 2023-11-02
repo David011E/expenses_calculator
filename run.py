@@ -54,11 +54,11 @@ first_name, last_name = greet_user()
 def get_job_position():
 
     job_positions = {
-        "a": {"name": "Management", "rate": 250},
-        "b": {"name": "Marketing", "rate": 320},
-        "c": {"name": "Accountant", "rate": 230},
-        "d": {"name": "Project manager", "rate": 300},
-        "e": {"name": "Business Analyst", "rate": 350},
+        "a": {"name": "Management", "rate": 960},
+        "b": {"name": "Marketing", "rate": 1600},
+        "c": {"name": "Accountant", "rate": 800},
+        "d": {"name": "Project manager", "rate": 1150},
+        "e": {"name": "Business Analyst", "rate": 1300},
     }
 
     while True:
