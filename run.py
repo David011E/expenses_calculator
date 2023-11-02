@@ -93,3 +93,17 @@ def user_selected_job(selected_job, first_name):
     print(f"\n{first_name} You made ฿{made_per_month} per month!")
 
 made_per_month = user_selected_job(selected_job, first_name)
+
+def expenses_this_month(first_name):
+    while True:
+        expenses_str = input("How much in expenses do you have this month?\n")
+        expenses_str = expenses_str.strip()  
+
+        if expenses_str.isdigit(): 
+            expenses = int(expenses_str)
+            print(f"\n{first_name} You have ฿{expenses_str} in expenses this month")
+            return expenses
+        else:
+            print("Cannot leave this empty or enter any words. Please try again.\n")
+
+expenses = expenses_this_month(first_name)
