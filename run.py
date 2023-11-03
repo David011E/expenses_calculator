@@ -138,4 +138,4 @@ def after_all_expenses(made_per_month, expenses, first_name):
 
     return remaining
 
-after_all_expenses(made_per_month, expenses, first_name)
+remaining = after_all_expenses(made_per_month, expenses, first_name)
