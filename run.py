@@ -115,9 +115,16 @@ def expenses_this_month(first_name):
 
         if expenses_str.isdigit(): 
             expenses = int(expenses_str)
-            print(f"\n{first_name} You have ฿{expenses_str} in expenses this month")
-            return expenses
+            confirm = input(
+                f"{first_name}, You have ฿{expenses} in expenses this month. Is this correct? Enter (y/n) only: ").lower()
+            if confirm == "y":
+                print(f"You have confirmed ฿{expenses} in expenses for this month.")
+                return expenses
+            elif confirm == "n":
+                continue  # User doesn't want to confirm, continue the loop
+            else:
+                print("Invalid input. Please enter 'y' or 'n.'") 
         else:
-            print("Cannot leave this empty or enter any words. Please try again.\n")
+            print("Invalid input. Please enter a valid number for expenses.")
 
 expenses = expenses_this_month(first_name)
