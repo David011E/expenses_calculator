@@ -105,6 +105,7 @@ def user_selected_job(selected_job, first_name):
     made_per_month = rate * days_in_current_month
 
     print(f"\n{first_name} You made ฿{made_per_month} per month!")
+    return made_per_month
 
 made_per_month = user_selected_job(selected_job, first_name)
 
@@ -126,5 +127,15 @@ def expenses_this_month(first_name):
                 print("Invalid input. Please enter 'y' or 'n.'") 
         else:
             print("Invalid input. Please enter a valid number for expenses.")
+        return expenses
 
 expenses = expenses_this_month(first_name)
+
+def after_all_expenses(made_per_month, expenses, first_name):
+    remaining = made_per_month - expenses
+
+    print(f"{first_name} after all expenses, you have ฿{remaining} remaining. ")
+
+    return remaining
+
+after_all_expenses(made_per_month, expenses, first_name)
