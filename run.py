@@ -43,6 +43,9 @@ def get_lName():
             print("Cannot insert numbers or leave this empty. Please try again.\n")
 
 def greet_user():
+    """"
+    Greets the user
+    """
     first_name = get_fName()
     last_name = get_lName()
 
@@ -50,6 +53,10 @@ def greet_user():
     return first_name, last_name
 
 def get_job_position():
+
+    """"
+    Asks user to select the job position and to confirm it
+    """
 
     job_positions = {
         "a": {"name": "Management", "rate": 960},
@@ -85,6 +92,9 @@ def get_job_position():
             print("Invalid job option. Please choose a valid job position.\n")
 
 def user_selected_job(selected_job, first_name):
+    """"
+    Calculates how much the user has made by from the selected job * how many days are in this month
+    """
     rate = selected_job["rate"]
      # Get the current date
     current_date = datetime.now()
@@ -104,6 +114,9 @@ def user_selected_job(selected_job, first_name):
     return made_per_month
 
 def expenses_this_month(first_name):
+    """"
+    Ask user how much in expenses do they have this month and asks to confirm
+    """
     while True:
         expenses_str = input("How much in expenses do you have this month?\n")
         expenses_str = expenses_str.strip()  
@@ -124,6 +137,9 @@ def expenses_this_month(first_name):
         return expenses
 
 def after_all_expenses(made_per_month, expenses, first_name):
+    """"
+    Calculates how much the user is left after all expenses
+    """
     remaining = made_per_month - expenses
 
     print(f"{first_name} after all expenses, you have ฿{remaining} remaining. ")
@@ -131,6 +147,9 @@ def after_all_expenses(made_per_month, expenses, first_name):
     return remaining
 
 def update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining):
+    """"
+    Updates all data recived to google sheets
+    """
     print("Updating worksheet...\n")
     expenses_calculator_worksheet = SHEET.worksheet("expenses_calculator")
     
@@ -143,6 +162,9 @@ def update_google_sheets(first_name, last_name, selected_job, made_per_month, ex
     print("Worksheet updated successfully.\n")
 
 def main():
+    """"
+    Run all program functions
+    """
     first_name, last_name = greet_user()
     selected_job = get_job_position()
     made_per_month = user_selected_job(selected_job, first_name)
