@@ -139,3 +139,17 @@ def after_all_expenses(made_per_month, expenses, first_name):
     return remaining
 
 remaining = after_all_expenses(made_per_month, expenses, first_name)
+
+def update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining):
+    print("Updating worksheet...\n")
+    expenses_calculator_worksheet = SHEET.worksheet("expenses_calculator")
+    
+    # Create a list containing all the values you want to append
+    row_data = [first_name, last_name, selected_job['name'], made_per_month, expenses, remaining]
+    
+    # Append the row data to the worksheet
+    expenses_calculator_worksheet.append_row(row_data)
+    
+    print("Worksheet updated successfully.\n")
+
+update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining)
