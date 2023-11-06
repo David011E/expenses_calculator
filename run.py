@@ -49,8 +49,6 @@ def greet_user():
     print(f"\n Hello, {first_name} {last_name}! Welcome!")
     return first_name, last_name
 
-first_name, last_name = greet_user()
-
 def get_job_position():
 
     job_positions = {
@@ -86,8 +84,6 @@ def get_job_position():
         else:
             print("Invalid job option. Please choose a valid job position.\n")
 
-selected_job = get_job_position()
-
 def user_selected_job(selected_job, first_name):
     rate = selected_job["rate"]
      # Get the current date
@@ -106,8 +102,6 @@ def user_selected_job(selected_job, first_name):
 
     print(f"\n{first_name} You made ฿{made_per_month} per month!")
     return made_per_month
-
-made_per_month = user_selected_job(selected_job, first_name)
 
 def expenses_this_month(first_name):
     while True:
@@ -129,16 +123,12 @@ def expenses_this_month(first_name):
             print("Invalid input. Please enter a valid number for expenses.")
         return expenses
 
-expenses = expenses_this_month(first_name)
-
 def after_all_expenses(made_per_month, expenses, first_name):
     remaining = made_per_month - expenses
 
     print(f"{first_name} after all expenses, you have ฿{remaining} remaining. ")
 
     return remaining
-
-remaining = after_all_expenses(made_per_month, expenses, first_name)
 
 def update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining):
     print("Updating worksheet...\n")
@@ -152,4 +142,13 @@ def update_google_sheets(first_name, last_name, selected_job, made_per_month, ex
     
     print("Worksheet updated successfully.\n")
 
-update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining)
+def main():
+    first_name, last_name = greet_user()
+    selected_job = get_job_position()
+    made_per_month = user_selected_job(selected_job, first_name)
+    expenses = expenses_this_month(first_name)
+    remaining = after_all_expenses(made_per_month, expenses, first_name)
+    update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining)
+
+if __name__ == "__main__":
+    main()
