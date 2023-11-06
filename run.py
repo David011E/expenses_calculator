@@ -150,5 +150,7 @@ def main():
     remaining = after_all_expenses(made_per_month, expenses, first_name)
     update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining)
 
+print("Welcome to the Expenses Calculator for our bussines\n")
+
 if __name__ == "__main__":
     main()
