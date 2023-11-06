@@ -140,19 +140,6 @@ def after_all_expenses(made_per_month, expenses, first_name):
 
 remaining = after_all_expenses(made_per_month, expenses, first_name)
 
-def gathering_all_data(first_name, last_name, selected_job, made_per_month, expenses, remaining):
-    user_data = {
-        "First Name" : first_name,
-        "Last Name" : last_name,
-        "Job position" : selected_job['name'],
-        "Made this month" : made_per_month,
-        "Expenses this month" : expenses,
-        "After all expenses left with" : remaining
-    }
-
-    return user_data
-
-
 def update_google_sheets(first_name, last_name, selected_job, made_per_month, expenses, remaining):
     print("Updating worksheet...\n")
     expenses_calculator_worksheet = SHEET.worksheet("expenses_calculator")
