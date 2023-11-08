@@ -156,3 +156,12 @@ The main technology used to create this program is Python HTML and CSS to change
 
 - gsrpead
 - dateutil
+
+---
+
+## Testing
+
+The portal has been well tested and the results can be viewed [HERE - TESTING.md](TESTING.md) 
+
+---
+
