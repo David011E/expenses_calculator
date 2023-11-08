@@ -139,3 +139,20 @@ After the user has entered all the data and confirmed then all data will be adde
 - expenses this month
 
 ![gsheet](assets/images/google-sheets.png)
+
+## Technologies Used
+
+The main technology used to create this program is Python HTML and CSS to change the outcome of the button. Google API Google Sheets.
+
+### Resources
+
+- Codeanywhere 
+- Visual Studio Code (VSC)
+- GitHub 
+- Heroku
+- Canva for help with images
+
+### Libraries
+
+- gsrpead
+- dateutil
