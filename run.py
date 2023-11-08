@@ -115,13 +115,13 @@ def user_selected_job(selected_job, first_name):
 
 def expenses_this_month(first_name):
     """"
-    Ask user how much in expenses do they have this month and asks to confirm
+    Ask user how much in expenses do they have this month and ask to confirm
     """
     while True:
         expenses_str = input("How much in expenses do you have this month?\n")
-        expenses_str = expenses_str.strip()  
+        expenses_str = expenses_str.strip()
 
-        if expenses_str.isdigit(): 
+        if expenses_str.isdigit():
             expenses = int(expenses_str)
             confirm = input(
                 f"{first_name}, You have ฿{expenses} in expenses this month. Is this correct? Enter (y/n) only: ").lower()
@@ -131,10 +131,11 @@ def expenses_this_month(first_name):
             elif confirm == "n":
                 continue  # User doesn't want to confirm, continue the loop
             else:
-                print("Invalid input. Please enter 'y' or 'n.'") 
+                print("Invalid input. Please enter 'y' or 'n.'")
         else:
             print("Invalid input. Please enter a valid number for expenses.")
-        return expenses
+        
+
 
 def after_all_expenses(made_per_month, expenses, first_name):
     """"
