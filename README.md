@@ -21,7 +21,6 @@ The live link can be found [HERE](https://expenses--calculator-4db02840ab2a.hero
     - [Expenses](#Expenses)
 
 - [Google Sheets](#google-sheets)
-    - [Google Sheets preview](#confirm-information)
     - [What information is included](#What-information-is-included)
 
 - [Technologies Used](#technologies-used)
@@ -127,3 +126,16 @@ After that if the user enters the amount then presses yes all the data will be u
 ![Expenses Calculator y](/assets/images/updated-to-sheets.png)
 
 ---
+
+### Google Sheets
+
+After the user has entered all the data and confirmed then all data will be added to google sheets for the user to keep track of thier expenses.
+
+### What information is included
+
+- First name
+- Last name
+- job position 
+- expenses this month
+
+![gsheet](assets/images/google-sheets.png)
