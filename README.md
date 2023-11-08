@@ -77,3 +77,13 @@ My actual notes that created the flow chart
 ![Expenses Calculator notes](/assets/images/page-2-of-flow-chart.jpeg)
 
 ![Expenses Calculator notes](/assets/images/page-3-of-flow-chart.jpeg)
+
+---
+
+### Development
+
+Code was written for each part of the program starting with the header and input for users to add their name. Once each section was working the development of the following section took place. Once all sections had been created testing took place which highlighted the need for additional features.
+
+i.e. In the "input name" section the user could hit enter and a blank space would be inputted so the first and last names were made required fields. Instructions were written to ensure each user understood the importance of entering their name only. After testing with required fields, the inability to add symbols and numbers was also added.
+
+![Expenses Calculator name error](/assets/images/invalid-name.png)
