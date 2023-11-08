@@ -16,10 +16,9 @@ The live link can be found [HERE](https://expenses--calculator-4db02840ab2a.hero
 - [Development](#development)
 
 - [Features](#features)
-    - [Name and Last name](#name-and-last-name-input)
+    - [Name and Greet the user](#name-and-last-name-input)
     - [Job Position](#name-and-last-name-input)
     - [Expenses](#Expenses)
-    - [Confirm information so far](#confirm-information)
 
 - [Google Sheets](#google-sheets)
     - [Google Sheets preview](#confirm-information)
@@ -87,3 +86,44 @@ Code was written for each part of the program starting with the header and input
 i.e. In the "input name" section the user could hit enter and a blank space would be inputted so the first and last names were made required fields. Instructions were written to ensure each user understood the importance of entering their name only. After testing with required fields, the inability to add symbols and numbers was also added.
 
 ![Expenses Calculator name error](/assets/images/invalid-name.png)
+
+## Features
+
+### Name and Greet the user
+This feature gives the program the information it needs to greet the user.
+
+![Expenses Calculator name](/assets/images/greet-user.png)
+
+### Job Position
+
+Next. The user is asked to select their job position. An error message is displayed if an invalid letter is added:
+
+![Expenses Calculator invalid](/assets/images/job-position-if-invalid.png)
+
+This is if the user selects and then presses n the program will loop and ask job position again. 
+
+![Expenses Calculator n](/assets/images/job-position-if-n.png)
+
+This is if the user select y it will then calculate how much they have made this month then ask the next question.
+
+![Expenses Calculator y](/assets/images/job-position-if-y.png)
+
+### Expenses
+
+Then the user will now be ask to enter thier expenses for this month. If the user enters any alphabetical words in the input it will loop and then ask the question again.
+
+![Expenses Calculator alphabetical words](/assets/images/expenses-if-enter-alphabet-with-numbers.png)
+
+If the user has entered the amount then they will be asked to confirm
+
+![Expenses Calculator confirm](/assets/images/expenses-confirm.png)
+
+If the user has entered the amount the presses n then the question will be asked again.
+
+![Expenses Calculator n](/assets/images/expenses-loop-if-no.png)
+
+After that if the user enters the amount then presses yes all the data will be updated to google sheets
+
+![Expenses Calculator y](/assets/images/updated-to-sheets.png)
+
+---
