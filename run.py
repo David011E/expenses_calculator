@@ -162,6 +162,20 @@ def update_google_sheets(first_name, last_name, selected_job, made_per_month, ex
     
     print("Worksheet updated successfully.\n")
 
+def restart_program():
+    """
+    Asks the user if they want to restart the program again after thier finished
+    """
+    while True:
+        user_input = input("Do you want to run the program again? (yes/no): ")
+        if user_input.lower() == "no":
+            print("Goodbye")
+            break
+        elif user_input.lower() == "yes":
+            main()
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+
 def main():
     """"
     Run all program functions
@@ -177,3 +191,4 @@ print("Welcome to the Expenses Calculator for our bussines\n")
 
 if __name__ == "__main__":
     main()
+    restart_program()
