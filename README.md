@@ -29,7 +29,6 @@ The live link can be found [HERE](https://expenses--calculator-4db02840ab2a.hero
 
 - [Testing](#testing)
 
-- [Validation](#validation)
 - [Deployment](#deployment)
     - [Heroku](#heroku)
     - [Branching the GitHub Repository using GitHub and Visual Studio Code](#branching-the-github-repository-using-github-and-visual-studio-code)
@@ -164,4 +163,36 @@ The main technology used to create this program is Python HTML and CSS to change
 The portal has been well tested and the results can be viewed [HERE - TESTING.md](TESTING.md) 
 
 ---
+
+## Deployment
+
+### Heroku
+
+The Application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file.  Also add a key 'PORT' and value '8000'.
+6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
+7. Go to "Deploy" and select "GitHub" in "Deployment method"
+8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+9.  Choose the branch you want to build your app from
+10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+### Branching the GitHub Repository using GitHub and Visual Studio Code
+1. Open Visual Studio Code.
+2. In the task bar enter >git: Clone.
+3. Choose Clone from github.
+4. Choose Repository name.
+5. Choose a file you want to put it in.
+6. Then open the project.
+
+## Credits 
+
+Code Institute the video that showed me how to deploy the project I had to go back and walkthrough that again so I deployed my project the correct way. - [HERE](https://www.youtube.com/watch?v=ONx3iEqAOM4)
+
+And Google because I did my research for my date time  library.
 
